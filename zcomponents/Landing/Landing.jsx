@@ -1,10 +1,8 @@
 import React from "react";
-const { Alert, View, Text, Image, StyleSheet, Button, Platform } = require("react-native");
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import logo from './peach.png'
+const { Alert, View, Text, Image, StyleSheet, Button, Platform, TouchableOpacity } = require("react-native");
 
 
-function Landing() {
+function Landing({ navigation }) {
 
     return(
         <View style={styles.container}>
@@ -16,10 +14,16 @@ function Landing() {
                 boodi
             </Text>
             <Button 
-                title="LOG IN"
+                title="LOGIN"
                 color='#5AA382'
-                onPress={() => alert('Simple Button pressed')}
+                onPress={() => navigation.navigate('Create')}
             />
+            <TouchableOpacity
+                style={styles.loginScreenButton}
+                onPress={() => navigation.navigate('Create')}
+                underlayColor='#FFFFFF'>
+                <Text style={styles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
     },
     title: {
       color: '#5AA382',
-      fontSize: RFValue(40, 580),
+      fontSize: 45,
       //fontFamily: 'Montserrat, sans-serif',
       //fontFamily: Platform.OS === 'ios' ? 'sans-serif': '',
       ...Platform.select({
@@ -52,6 +56,25 @@ const styles = StyleSheet.create({
       }),
       fontWeight: 'bold',
       display: 'flex',
+    },
+    loginScreenButton:{
+        marginRight:40,
+        marginLeft:40,
+        marginTop:10,
+        paddingTop:10,
+        paddingBottom:10,
+        backgroundColor:'#5AA382',
+        borderRadius:10,
+        borderWidth: 1,
+        borderColor: "transparent"
+    },
+    loginText:{
+        color:'#fff',
+        textAlign:'center',
+        paddingLeft : 10,
+        paddingRight : 10,
+        fontFamily: 'Arial',
+        fontWeight: "bold"
     }
 });
   
