@@ -11,7 +11,10 @@ function Landing({ navigation }) {
                 style={{width: 60, height: 60}}
             />
             <Text style={styles.title}>
-                boodi
+                boodi 
+            </Text>
+            <Text>
+                on mac os
             </Text>
             <Button 
                 title="LOGIN"
