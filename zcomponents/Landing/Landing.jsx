@@ -16,11 +16,6 @@ function Landing({ navigation }) {
             <Text>
                 on mac os
             </Text>
-            <Button 
-                title="LOGIN"
-                color='#5AA382'
-                onPress={() => navigation.navigate('Create')}
-            />
             <TouchableOpacity
                 style={styles.loginScreenButton}
                 onPress={() => navigation.navigate('Create')}

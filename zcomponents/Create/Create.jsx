@@ -6,18 +6,19 @@ function Create({ navigation }) {
 
     return( 
         <View>
-            ON MAC OS NOW MF
+            <Text>ON MAC OS NOW MF</Text>
             <TouchableOpacity
                 style={styles.loginScreenButton}
-                onPress={() => navigation.navigates('Landing')}
+                onPress={() => navigation.navigate('Landing')}
                 underlayColor='#FFFFFF'>
+                <Text style={styles.loginText}>ON MAC OS NOW MF</Text>
             </TouchableOpacity>
         </View>
     )
 }
 const styles = StyleSheet.create({
     loginScreenButton:{
-        marginRightss:40,
+        marginRight:40,
         marginLeft:40,
         marginTop:10,
         paddingTop:10,
